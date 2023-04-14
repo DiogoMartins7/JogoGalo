@@ -27,6 +27,7 @@ function play() {
   }
 }
 
+// Validar se a posiçãao é valida
 function isMoveValid() {
   return true;
 }
