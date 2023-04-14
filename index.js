@@ -8,8 +8,8 @@ const btnPlay = document.getElementById('btnPlay');
 
 btnPlay.addEventListener('click', play);
 
-var tabuleiro =
-  ' 1 | 2 | 3 <br>----------<br> 4 | 5 | 6 <br>----------<br> 7 | 8 | 9 <br><br>';
+var tabuleiro =  ' 1 | 2 | 3 <br>----------<br> 4 | 5 | 6 <br>----------<br> 7 | 8 | 9 <br><br>';
+var pos = 'X';
 var jogador = 'X';
 
 appDiv.innerHTML = tabuleiro;
@@ -31,3 +31,4 @@ function play() {
 function isMoveValid() {
   return true;
 }
+
