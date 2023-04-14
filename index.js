@@ -4,44 +4,29 @@ import './style.css';
 // Write Javascript code!
 const appDiv = document.getElementById('app');
 const info = document.getElementById('info');
+const btnPlay = document.getElementById('btnPlay');
 
+btnPlay.addEventListener('click', play);
 
-//var tabuleiro =' 1 | 2 | 3 <br>----------<br> 4 | 5 | 6 <br>----------<br> 7 | 8 | 9 <br>';
-var tabuleiro =' 1 | 2 | 3 \n----------\n 4 | 5 | 6 \n----------\n 7 | 8 | 9';
-var pos = 'test'
-var jogador = 'X'
+var tabuleiro =
+  ' 1 | 2 | 3 <br>----------<br> 4 | 5 | 6 <br>----------<br> 7 | 8 | 9 <br><br>';
+var jogador = 'X';
 
-function start() {
-  info.innerText = 'Jogador X: 1 Jogador O: 0'
+appDiv.innerHTML = tabuleiro;
 
-  while (Number(pos) !== 0){
-    //appDiv.innerHTML = tabuleiro;
-    //console.log(tabuleiro)
-    print();
-    pos = prompt("Jogador "  + jogador);
-    if (jogadaValida(pos)) {
-      tabuleiro = tabuleiro.replace(pos, jogador);
-      if (jogador === 'X')
-        jogador = 'O'
-      else
-        jogador = 'X'
-    }
+function play() {
+  info.innerText = 'Jogador X: 1\nJogador O: 0\n\n';
+
+  pos = prompt('Jogador ' + jogador);
+
+  if (isMoveValid()) {
+    tabuleiro = tabuleiro.replace(pos, jogador);
+    if (jogador === 'X') jogador = 'O';
+    else jogador = 'X';
+    appDiv.innerHTML = tabuleiro;
   }
 }
 
-function jogadaValida(pos) {
-  //tabuleiro.(pos)
+function isMoveValid() {
   return true;
-  return fasLe;
 }
-
-function finished() {
-  
-}
-//
-function print() {
-  console.log(tabuleiro);
-}
-
-
-//start();
